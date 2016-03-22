@@ -1,0 +1,23 @@
+{
+  "name": "angular-template",
+  "description": "",
+  "main": "app.js",
+  "authors": [
+    "browneryan <browneryan87@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "https://github.com/browneryan/js-template",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "bootstrap": "^3.3.6",
+    "moment": "^2.12.0"
+  }
+}
