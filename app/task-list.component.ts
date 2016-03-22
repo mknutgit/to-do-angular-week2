@@ -4,13 +4,14 @@ import { Task } from './task.model';
 import { EditTaskDetailsComponent } from './edit-task-details.component';
 import { NewTaskComponent } from './new-task.component';
 import { DonePipe } from './done.pipe';
+import { PriorityPipe } from './priority.pipe';
 
 ///* This component controls the selection, or event handlers, for a task.  This is a child component of AppComponent ///
 @Component({
   selector: 'task-list',
   inputs: ['taskList'],
   outputs: ['onTaskSelect'],
-  pipes: [DonePipe],
+  pipes: [DonePipe, PriorityPipe],
   directives: [TaskComponent, EditTaskDetailsComponent, NewTaskComponent],
   template: `
   <select (change)="onChange($event.target.value)" class="filter">
@@ -37,6 +38,7 @@ export class TaskListComponent {
   public onTaskSelect: EventEmitter<Task>;
   public selectedTask: Task;
   public filterDone: string = "notDone";
+  public filterPriority: string = "none";
   constructor() {
     this.onTaskSelect = new EventEmitter();
   }
